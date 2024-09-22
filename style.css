@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* font-size: 62.5%;{//10px root font size} */
+  font-size: 62.5%;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  background-color: #000;
+}
+.wrapper {
+  display: inline-flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper a {
+  width: 22rem;
+  height: 7rem;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #ff0000;
+  color: goldenrod;
+  font-size: 2.2rem;
+  line-height: 7rem;
+  margin: 1rem;
+  position: relative;
+}
+.wrapper a span {
+  background-color: #ff0000;
+  position: absolute;
+
+  z-index: -1;
+  transition: 0.8s ease-out;
+}
+.wrapper a:hover {
+  color: #fff;
+  transition: 0.8s;
+}
+.wrapper a .to-right {
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.wrapper a:hover .to-right {
+  width: 100%;
+  transition: 0.8s;
+}
+.wrapper a .to-left {
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+.wrapper a:hover .to-left {
+  width: 100%;
+  transition: 0.8s;
+}
+.wrapper a .to-top {
+  height: 0;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+}
+.wrapper a:hover .to-top {
+  height: 100%;
+  transition: 0.8s;
+}
+.wrapper a .to-bottom {
+  height: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.wrapper a:hover .to-bottom {
+  height: 100%;
+  transition: 0.8s;
+}
+
+.wrapper a .diagonal {
+  height: 0;
+  width: 0;
+  bottom: 0;
+  left: 0;
+}
+.wrapper a:hover .diagonal {
+  height: 100%;
+  width: 100%;
+  transition: 0.8s;
+}
+
+.wrapper a .diagonal-revert {
+  height: 0;
+  width: 0;
+  bottom: 0;
+  right: 0;
+  animation: diagonal 1.5s ease infinite;
+}
+.wrapper a:hover .diagonal-revert {
+  height: 100%;
+  width: 100%;
+  transition: 0.8s;
+}
+
+@keyframes diagonal {
+  0% {
+    height: 0;
+    width: 0;
+    bottom: 0;
+    right: 0;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+    transition: 0.8s;
+  }
+}
